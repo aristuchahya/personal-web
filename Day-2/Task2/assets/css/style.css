@@ -134,9 +134,22 @@ nav ul li:last-child {
   gap: 2rem;
 }
 
-.fab {
-  font-size: 2rem;
-  color: black;
+.social-media a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-size: 1.5rem;
+  background-color: black;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.social-media a:hover {
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
 }
 
 .profile {
