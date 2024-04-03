@@ -243,8 +243,9 @@ button[type="submit"]:hover {
 
   nav ul {
     display: flex;
-    gap: 1 rem;
+    gap: 0.8rem;
     font-size: 0.9rem;
+    margin-left: -5px;
   }
 
   .nav-contact {
