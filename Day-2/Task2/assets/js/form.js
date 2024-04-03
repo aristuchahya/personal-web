@@ -4,10 +4,14 @@ function submitForm() {
   let subject = document.getElementById("subject").value;
   let message = document.getElementById("message").value;
 
+  const emailFormat = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
   if (name == "") {
     return alert("Please enter your name!");
   } else if (email == "") {
     return alert("Please enter your email!");
+  } else if (!email.match(emailFormat)) {
+    return alert("Please enter a valid email!");
   } else if (subject == "") {
     return alert("Please enter your subject!");
   } else if (message == "") {
@@ -23,7 +27,11 @@ function submitForm() {
 
   const yourEmail = "namikazeuzumaki43@gmail.com";
 
-  let a = document.createElement("a");
-  a.href = `https://mail.google.com/mail/?view=cm&fs=1&to=${yourEmail}&su=${subject}&body=${message}`;
-  a.click();
+  const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${yourEmail}&su=${encodeURIComponent(
+    data.subject
+  )}&body=${encodeURIComponent(data.message)}`;
+
+  window.open(gmailLink);
+
+  console.log(data);
 }
