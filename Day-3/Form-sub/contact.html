@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <form action="">
+      <div>
+        <label for="name">Name</label>
+        <input type="text" id="name" required placeholder="Enter your name" />
+      </div>
+      <div>
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          required
+          placeholder="Enter your email"
+        />
+      </div>
+      <div>
+        <label for="phone">Phone</label>
+        <input type="tel" id="phone" required placeholder="Enter your phone" />
+      </div>
+
+      <div>
+        <label for="subject">Subject</label>
+        <select name="subject" id="subject">
+          <option value="frontend">Frontend</option>
+          <option value="backend">Backend</option>
+          <option value="fullstack">Fullstack</option>
+        </select>
+      </div>
+      <div>
+        <label for="message">Message</label>
+        <textarea name="message" id="message" cols="30" rows="10"></textarea>
+      </div>
+      <div>
+        <button type="button" onclick="submitHandler()">Submit</button>
+      </div>
+    </form>
+
+    <script src="assets/js/contact.js"></script>
+  </body>
+</html>

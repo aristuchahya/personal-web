@@ -26,29 +26,32 @@
     <div class="wrapper">
       <h1>GET IN TOUCH</h1>
       <form action="" class="form-contact">
-        <label for="input-name">Name</label>
-        <input type="text" id="input-name" />
+        <label for="name">Name</label>
+        <input type="text" id="name" required placeholder="Enter your name" />
 
-        <label for="input-email">Email</label>
-        <input type="text" id="input-email" />
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          required
+          placeholder="Enter your email"
+        />
 
-        <label for="input-subject">Subject</label>
-        <select name="input-subject" id="input-subject">
+        <label for="subject">Subject</label>
+        <select name="subject" id="subject">
           <option value="#" hidden></option>
           <option value="Frontend">Frontend Developer</option>
           <option value="Backend">Backend Developer</option>
           <option value="FullStack">Fullstack Developer</option>
         </select>
-        <label for="input-name">Your Message</label>
-        <textarea
-          name="input-message"
-          id="input-message"
-          cols="30"
-          rows="10"
-        ></textarea>
 
-        <input type="submit" value="Submit" />
+        <label for="message">Your Message</label>
+        <textarea name="message" id="message" cols="30" rows="10"></textarea>
+
+        <button type="submit" onclick="submitForm()">Submit</button>
       </form>
     </div>
+
+    <script src="assets/js/form.js"></script>
   </body>
 </html>
