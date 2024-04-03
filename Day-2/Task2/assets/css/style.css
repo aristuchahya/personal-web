@@ -290,6 +290,10 @@ button[type="submit"]:hover {
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.08);
   }
 
+  textarea {
+    height: 100px;
+  }
+
   button[type="submit"] {
     width: 30%;
     margin-top: 1rem;
