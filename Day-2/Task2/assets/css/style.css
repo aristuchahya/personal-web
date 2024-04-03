@@ -62,9 +62,10 @@ nav ul li:last-child {
 .nav-contact {
   background-color: black;
   color: white;
-  padding: 10px 15px;
+  padding: 8px 12px;
   border-radius: 20px;
   text-decoration: none;
+  font-size: 15px;
 }
 
 .card {
@@ -235,12 +236,28 @@ button[type="submit"]:hover {
   transition: opacity 0.3s ease;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 600px) {
+  nav {
+    padding: 0.2rem;
+  }
+
+  nav ul {
+    display: flex;
+    gap: 1 rem;
+    font-size: 0.9rem;
+  }
+
+  .nav-contact {
+    padding: 6px 10px;
+    border-radius: 12px;
+  }
+
   .card {
     width: 90%;
     flex-direction: column;
     padding: 2rem;
     margin-block: 4rem;
+    margin-top: 7rem;
   }
 
   .social-media {
@@ -258,7 +275,7 @@ button[type="submit"]:hover {
 
   .wrapper {
     width: 80%;
-    margin-top: 3rem;
+    margin-top: 6rem;
   }
 
   input,
