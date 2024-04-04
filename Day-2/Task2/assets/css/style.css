@@ -208,6 +208,10 @@ textarea {
   border-radius: 5px;
   border: 1px solid rgb(0, 0, 0, 0.3);
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.08);
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  padding: 10px;
+  font-weight: 500;
 }
 
 select {
@@ -235,6 +239,20 @@ button[type="submit"] {
 button[type="submit"]:hover {
   opacity: 0.8;
   transition: opacity 0.3s ease;
+}
+
+#project-name {
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  padding: 10px;
+}
+
+#description {
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  padding: 10px;
 }
 
 .duration {

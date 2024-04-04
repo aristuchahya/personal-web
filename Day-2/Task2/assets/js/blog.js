@@ -39,4 +39,6 @@ function addProject(event) {
   });
 
   console.log(dataProject);
+
+  document.getElementById("form-project").reset();
 }
