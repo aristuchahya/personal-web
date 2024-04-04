@@ -46,6 +46,7 @@ nav ul li:last-child {
   text-decoration: none;
   color: black;
   font-weight: 500;
+  cursor: pointer;
 }
 
 .nav-item:hover {
@@ -236,6 +237,118 @@ button[type="submit"]:hover {
   transition: opacity 0.3s ease;
 }
 
+.duration {
+  display: flex;
+}
+
+.duration .start,
+.duration .end {
+  width: 50%;
+}
+
+.start {
+  margin-right: 50px;
+}
+
+.duration input[type="date"] {
+  display: block;
+  width: 100%;
+}
+
+.checking {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.checking label {
+  margin-left: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.check-tech,
+.label-check {
+  width: 35%;
+}
+
+.check-tech[type="checkbox"] {
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background-color: white;
+  border: 1px solid rgb(0, 0, 0, 0.3);
+  border-radius: 5px;
+  outline: none;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.check-tech[type="checkbox"]:hover {
+  border-color: #e3e7eb;
+}
+
+.check-tech[type="checkbox"]:checked {
+  background-color: #13ee05;
+  border-color: #13ee05;
+}
+
+.check-tech[type="checkbox"]:checked::before {
+  content: "";
+  position: absolute;
+  color: white;
+  top: 1px;
+  left: 5px;
+  width: 0.5rem;
+  height: 1rem;
+  border-style: solid;
+  border-width: 0 0.2rem 0.2rem 0;
+  transform: rotate(45deg);
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.file-upload {
+  display: inline-block;
+  padding: 8px 16px;
+  color: black;
+  border: 1px solid rgb(0, 0, 0, 0.3);
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.file-upload-wrapper {
+  width: 100%;
+  position: relative;
+  display: flex;
+  border: 1px solid rgb(0, 0, 0, 0.3);
+  border-radius: 5px;
+  background-color: white;
+}
+
+.file-upload-label {
+  display: inline-block;
+  width: 25%;
+  padding: 8px 16px;
+  background-color: #e4e4e4;
+  color: #b2abab;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.fa-paperclip {
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  transform: translateY(-50%);
+  font-size: 20px;
+}
+
 @media screen and (max-width: 600px) {
   nav {
     padding: 0.2rem;
@@ -248,9 +361,14 @@ button[type="submit"]:hover {
     margin-left: -5px;
   }
 
+  .nav-logo {
+    margin-left: 5px;
+  }
+
   .nav-contact {
     padding: 6px 10px;
     border-radius: 12px;
+    margin-right: 5px;
   }
 
   .card {
@@ -298,5 +416,15 @@ button[type="submit"]:hover {
     width: 30%;
     margin-top: 1rem;
     margin-bottom: 2rem;
+  }
+
+  .checking {
+    display: flex;
+    gap: 2px;
+  }
+
+  .file-upload-label {
+    width: 30%;
+    border-radius: 5px;
   }
 }

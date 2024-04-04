@@ -1,0 +1,27 @@
+input[type="file"] {
+  display: none;
+}
+
+/* Menambahkan gaya pada label yang meniru tombol */
+label {
+  background-color: #3498db;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Efek hover pada label */
+label:hover {
+  background-color: #2980b9;
+}
+
+.duration label {
+  display: inline-block;
+  width: 100px; /* Atur lebar label sesuai kebutuhan */
+  margin-right: 10px; /* Berikan jarak antara label dan input */
+}
+
+.duration input[type="date"] {
+  display: block;
+}
