@@ -180,6 +180,12 @@ nav ul li:last-child {
 }
 
 /* Contact Form */
+.container-project {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 .wrapper {
   width: 30%;
@@ -189,9 +195,32 @@ nav ul li:last-child {
   flex-direction: column;
 }
 
+.wrapper-project {
+  width: 60%;
+  margin-top: 6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wrapper-project-list {
+  width: 100%;
+  margin-top: 4rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+}
+
 .form-contact {
   display: flex;
   width: 100%;
+  flex-direction: column;
+}
+
+.form-myproject {
+  display: flex;
+  width: 70%;
   flex-direction: column;
 }
 
@@ -367,6 +396,59 @@ input[type="file"] {
   font-size: 20px;
 }
 
+.project-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  gap: 2rem;
+  width: 100%;
+}
+.card-project {
+  display: flex;
+  flex-direction: column;
+  max-width: 40%;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+  background-color: white;
+  overflow: hidden;
+}
+
+.profile-project {
+  width: 100%;
+  padding: 20px 20px 10px;
+  border-radius: 2rem;
+}
+
+.footer-project {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 10px;
+}
+
+.footer-project h2 {
+  margin: 1px;
+  font-weight: 500;
+}
+
+.durasi {
+  font-weight: 200;
+  font-size: 16px;
+  padding: 1px 0;
+  margin-top: 8px;
+  margin-bottom: 5px;
+}
+
+.desc-project {
+  max-height: calc(100% - 40px);
+  overflow-y: auto;
+  font-weight: 400;
+  padding-top: 5px;
+  margin-top: 5px;
+  font-size: 14px;
+  text-align: justify;
+}
+
 @media screen and (max-width: 600px) {
   nav {
     padding: 0.2rem;
@@ -415,6 +497,19 @@ input[type="file"] {
     margin-top: 6rem;
   }
 
+  .wrapper-project {
+    width: 100%;
+  }
+
+  .form-myproject {
+    width: 100%;
+  }
+
+  .duration .end,
+  .duration .start {
+    width: 42%;
+  }
+
   input,
   select,
   textarea {
@@ -444,5 +539,9 @@ input[type="file"] {
   .file-upload-label {
     width: 30%;
     border-radius: 5px;
+  }
+
+  .card-project {
+    max-width: 100%;
   }
 }

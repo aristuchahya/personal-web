@@ -23,58 +23,72 @@
       </ul>
     </nav>
 
-    <div class="wrapper">
-      <h1>ADD MY PROJECT</h1>
-      <form action="" class="form-contact" id="form-project">
-        <label for="project-name">Project Name</label>
-        <input type="text" id="project-name" />
+    <div class="container-project">
+      <div class="wrapper-project">
+        <h1>ADD MY PROJECT</h1>
+        <form action="" class="form-myproject" id="form-project">
+          <label for="project-name">Project Name</label>
+          <input type="text" id="project-name" />
 
-        <div class="duration">
-          <div class="start">
-            <label for="start-date">Start Date</label>
-            <input type="date" id="start-date" />
+          <div class="duration">
+            <div class="start">
+              <label for="start-date">Start Date</label>
+              <input type="date" id="start-date" />
+            </div>
+            <div class="end">
+              <label for="start-date">End Date</label>
+              <input type="date" id="end-date" />
+            </div>
           </div>
-          <div class="end">
-            <label for="start-date">End Date</label>
-            <input type="date" id="end-date" />
+
+          <label for="description">Description</label>
+          <textarea name="description" id="description"></textarea>
+
+          <label for="">Technologies</label>
+          <div class="checking">
+            <input class="check-tech" type="checkbox" id="technologies1" />
+            <label class="label-check" for="technologies1">Node JS</label>
+
+            <input class="check-tech" type="checkbox" id="technologies2" />
+            <label class="label-check" for="technologies2">React JS</label>
+
+            <input class="check-tech" type="checkbox" id="technologies3" />
+            <label class="label-check" for="technologies3">Next JS</label>
+
+            <input class="check-tech" type="checkbox" id="technologies4" />
+            <label class="label-check" for="technologies4">Typescript</label>
+          </div>
+
+          <label for="input-image">Upload Image</label>
+
+          <div class="file-upload-wrapper">
+            <input type="file" id="input-image" class="file-upload" />
+            <label for="input-image" class="file-upload-label">Choose </label>
+            <i class="fa-solid fa-paperclip"></i>
+          </div>
+          <button type="submit" onclick="addProject(event)">Submit</button>
+        </form>
+      </div>
+
+      <div class="wrapper-project-list">
+        <h1>MY PROJECT</h1>
+        <div class="project-list" id="list-project">
+          <div class="card-project">
+            <img
+              src="https://images.unsplash.com/photo-1542051841857-5f90071e7989?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="ini gambar"
+              class="profile-project"
+            />
+            <div class="footer-project">
+              <h2>Nama Project</h2>
+              <p class="durasi">Durasi</p>
+              <p class="desc-project" id="project-description">Deskripsi</p>
+              <a href="#">Read More</a>
+            </div>
           </div>
         </div>
-
-        <label for="description">Description</label>
-        <textarea
-          name="description"
-          id="description"
-          cols="30"
-          rows="10"
-        ></textarea>
-
-        <label for="">Technologies</label>
-        <div class="checking">
-          <input class="check-tech" type="checkbox" id="technologies1" />
-          <label class="label-check" for="technologies1">Node JS</label>
-
-          <input class="check-tech" type="checkbox" id="technologies2" />
-          <label class="label-check" for="technologies2">React JS</label>
-
-          <input class="check-tech" type="checkbox" id="technologies3" />
-          <label class="label-check" for="technologies3">Next JS</label>
-
-          <input class="check-tech" type="checkbox" id="technologies4" />
-          <label class="label-check" for="technologies4">Typescript</label>
-        </div>
-
-        <label for="input-image">Upload Image</label>
-
-        <div class="file-upload-wrapper">
-          <input type="file" id="input-image" class="file-upload" />
-          <label for="input-image" class="file-upload-label">Choose </label>
-          <i class="fa-solid fa-paperclip"></i>
-        </div>
-
-        <button type="submit" onclick="addProject(event)">Submit</button>
-      </form>
+      </div>
     </div>
-
     <script src="assets/js/blog.js"></script>
   </body>
 </html>

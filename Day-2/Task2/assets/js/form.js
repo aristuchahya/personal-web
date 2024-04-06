@@ -35,3 +35,13 @@ function submitForm() {
 
   console.log(data);
 }
+
+function openWhatsapp() {
+  const phoneNumber = "6282245916236";
+  const message = "Halo Aristu bisakah minta bantuan?";
+  const whatsappUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(
+    message
+  )}`;
+
+  window.open(whatsappUrl);
+}
