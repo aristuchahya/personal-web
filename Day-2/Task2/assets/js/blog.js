@@ -98,6 +98,15 @@ function newData() {
                 <h2>${data.project}</h2>
                 <p class="durasi">Durasi : ${data.duration}</p>
                 <p>${truncatedDesc} </p>
+                <ul class="list-tech">
+                  <li><i class="fa-brands fa-google-play"></i></li>
+                  <li><i class="fa-brands fa-android"></i></li>
+                  <li><i class="fa-brands fa-java"></i></li>
+                </ul>
+                <div class="list-btn">
+                  <button>Edit</button>
+                  <button>Delete</button>
+                </div>
                 <a href="#">Read More</a>
               </div>
             </div>
@@ -112,3 +121,36 @@ function truncateDesc(description, maxlength) {
     return description;
   }
 }
+
+// file upload
+// function resetUpload() {
+//   let wrapper = document.querySelector(".file-upload-wrapper");
+
+//   label.textContent = "Choose";
+//   label.style.backgroundColor = "#e4e4e4";
+//   label.style.color = "#b2abab";
+// }
+
+document.getElementById("input-image").addEventListener("change", function () {
+  let wrapper = document.querySelector(".file-upload-wrapper");
+
+  let previousIcon = wrapper.querySelector(".fa-solid");
+  if (previousIcon) {
+    wrapper.removeChild(previousIcon);
+  }
+
+  let uploadedIcon = document.createElement("i");
+  uploadedIcon.classList.add("fa-solid", "fa-check-circle");
+  wrapper.appendChild(uploadedIcon);
+
+  let label = document.querySelector(".file-upload-label");
+  label.style.backgroundColor = "#4CAF50";
+  label.style.color = "#fff";
+});
+
+// document
+//   .querySelector(".file-upload-label")
+//   .addEventListener("click", function () {
+//     resetUpload();
+//     document.getElementById("input-image").value = "";
+//   });
