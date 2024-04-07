@@ -240,11 +240,12 @@ textarea {
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.08);
   font-family: "Poppins", sans-serif;
   font-size: 15px;
-  padding: 10px;
+  padding: 5px;
   font-weight: 500;
 }
 
 select {
+  height: 2.5rem;
   cursor: pointer;
 }
 
