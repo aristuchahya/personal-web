@@ -551,6 +551,7 @@ input[type="file"] {
 
   .wrapper-project-list {
     width: 90%;
+    margin-right: 2rem;
   }
 
   .form-myproject {
