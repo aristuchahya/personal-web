@@ -85,8 +85,6 @@ function newData() {
   for (let i = 0; i < dataProject.length; i++) {
     let data = dataProject[i];
 
-    let truncatedDesc = truncateDesc(data.desc, 50);
-
     document.getElementById("list-project").innerHTML += `
             <div class="card-project">
               <img
@@ -97,7 +95,7 @@ function newData() {
               <div class="footer-project">
                 <h2>${data.project}</h2>
                 <p class="durasi">Durasi : ${data.duration}</p>
-                <p>${truncatedDesc} </p>
+                <p>${data.desc} </p>
                 <ul class="list-tech">
                   <li><i class="fa-brands fa-google-play"></i></li>
                   <li><i class="fa-brands fa-android"></i></li>
@@ -114,23 +112,7 @@ function newData() {
   }
 }
 
-function truncateDesc(description, maxlength) {
-  if (description.length > maxlength) {
-    return description.substring(0, maxlength) + "...";
-  } else {
-    return description;
-  }
-}
-
-// file upload
-// function resetUpload() {
-//   let wrapper = document.querySelector(".file-upload-wrapper");
-
-//   label.textContent = "Choose";
-//   label.style.backgroundColor = "#e4e4e4";
-//   label.style.color = "#b2abab";
-// }
-
+//upload image
 document.getElementById("input-image").addEventListener("change", function () {
   let wrapper = document.querySelector(".file-upload-wrapper");
 
@@ -148,9 +130,21 @@ document.getElementById("input-image").addEventListener("change", function () {
   label.style.color = "#fff";
 });
 
-// document
-//   .querySelector(".file-upload-label")
-//   .addEventListener("click", function () {
-//     resetUpload();
-//     document.getElementById("input-image").value = "";
-//   });
+function resetUpload() {
+  let wrapper = document.querySelector(".file-upload-wrapper");
+  let uploadedIcon = wrapper.querySelector(".fa-check-circle");
+  let label = wrapper.querySelector(".file-upload-label");
+
+  if (uploadedIcon) {
+    wrapper.removeChild(uploadedIcon);
+  }
+
+  let paperIcon = document.createElement("i");
+  paperIcon.classList.add("fa-solid", "fa-paperclip");
+  wrapper.appendChild(paperIcon);
+
+  label.style.backgroundColor = "";
+  label.style.color = "";
+
+  document.getElementById("input-image").value = "";
+}

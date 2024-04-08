@@ -66,7 +66,9 @@
             <label for="input-image" class="file-upload-label">Choose </label>
             <i class="fa-solid fa-paperclip"></i>
           </div>
-          <button type="submit" onclick="addProject(event)">Submit</button>
+          <button type="submit" onclick="addProject(event); resetUpload()">
+            Submit
+          </button>
         </form>
       </div>
 
@@ -82,7 +84,12 @@
             <div class="footer-project">
               <h2>Nama Project</h2>
               <p class="durasi">Durasi</p>
-              <p class="desc-project" id="project-description">Deskripsi</p>
+              <p class="desc-project">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae
+                sit, voluptatem labore corrupti sequi sint nulla earum ipsa quo
+                beatae incidunt odit porro consequatur dolores distinctio magnam
+                impedit placeat. Debitis!
+              </p>
               <ul class="list-tech">
                 <li><i class="fa-brands fa-google-play"></i></li>
                 <li><i class="fa-brands fa-android"></i></li>
