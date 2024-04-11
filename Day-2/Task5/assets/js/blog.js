@@ -43,6 +43,11 @@ function addProject(event) {
   let newStart = new Date(formatStarDate);
   let newEnd = new Date(formatEndDate);
 
+  let options = { day: "numeric", month: "long", year: "numeric" };
+
+  let formattedStartDate = newStart.toLocaleDateString("id-ID", options);
+  let formattedEndDate = newEnd.toLocaleDateString("id-ID", options);
+
   //konversi pengurangan milisecond
   let timeDiff = newEnd - newStart;
 
@@ -53,17 +58,17 @@ function addProject(event) {
   let duration;
 
   if (differenceYears > 0) {
-    duration = `${differenceYears} Years`;
+    duration = `${differenceYears} Year`;
   } else if (differenceMonth > 0) {
-    duration = `${differenceMonth} Months`;
+    duration = `${differenceMonth} Month`;
   } else {
-    duration = `${differenceDay} Days`;
+    duration = `${differenceDay} Day`;
   }
 
   dataProject.push({
     project: project,
-    start: start,
-    end: end,
+    start: formattedStartDate,
+    end: formattedEndDate,
     desc: desc,
     tech1: tech1,
     tech2: tech2,
@@ -102,14 +107,22 @@ function newData() {
                   <li><i class="fa-brands fa-java"></i></li>
                 </ul>
                 <div class="list-btn">
-                  <button>Edit</button>
+                  <button onclick="showDetails(${i})">Edit</button>
                   <button>Delete</button>
                 </div>
-                <a href="#">Read More</a>
+                
               </div>
             </div>
           `;
   }
+}
+
+function showDetails(index) {
+  let data = dataProject[index];
+
+  localStorage.setItem("selectedProject", JSON.stringify(data));
+
+  window.location = "blog-detail.html";
 }
 
 //upload image
