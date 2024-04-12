@@ -41,3 +41,5 @@ document.getElementById("detail-blog").innerHTML = `
         <p>${selectedProject.desc}</p>
         </div>
 `;
+
+console.log(selectedProject);
