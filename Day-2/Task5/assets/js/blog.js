@@ -89,6 +89,7 @@ function newData() {
   document.getElementById("list-project").innerHTML = "";
   for (let i = 0; i < dataProject.length; i++) {
     let data = dataProject[i];
+    let limitedDesc = limitSentences(data.desc, 20);
 
     document.getElementById("list-project").innerHTML += `
             <div class="card-project">
@@ -100,7 +101,7 @@ function newData() {
               <div class="footer-project">
                 <h2>${data.project}</h2>
                 <p class="durasi">Durasi : ${data.duration}</p>
-                <p>${data.desc} </p>
+                <p>${limitedDesc} </p>
                 <ul class="list-tech">
                   <li><i class="fa-brands fa-google-play"></i></li>
                   <li><i class="fa-brands fa-android"></i></li>
@@ -123,6 +124,16 @@ function showDetails(index) {
   localStorage.setItem("selectedProject", JSON.stringify(data));
 
   window.location = "blog-detail.html";
+}
+
+function limitSentences(sentence, limit) {
+  const words = sentence.split(" ");
+  if (words.length <= limit) {
+    return sentence;
+  } else {
+    const truncatedWord = words.slice(0, limit);
+    return truncatedWord.join(" ") + "...";
+  }
 }
 
 //upload image
