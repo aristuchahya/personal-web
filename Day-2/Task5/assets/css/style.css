@@ -6,13 +6,14 @@
 body {
   font-family: "Poppins", sans-serif;
   display: flex;
+  flex-direction: column;
   margin: 0;
   justify-content: center;
   background-color: #e3e7eb;
 }
 
 nav {
-  position: fixed;
+  position: relative;
   width: 100%;
   background-color: white;
   display: flex;
@@ -32,6 +33,11 @@ nav ul {
   gap: 2rem;
 }
 
+.nav-links {
+  margin: 0 auto;
+  display: none;
+}
+
 nav ul li {
   list-style-type: none;
   padding: 0;
@@ -39,7 +45,6 @@ nav ul li {
 
 nav ul li:last-child {
   margin-left: auto;
-  color: red;
 }
 
 .nav-item {
@@ -69,11 +74,16 @@ nav ul li:last-child {
   font-size: 15px;
 }
 
+.hamburger-menu {
+  display: none;
+}
+
 .card {
   width: 80%;
-  margin-block: 8rem;
+  margin: 20px auto;
   padding: 4rem;
   display: flex;
+  align-items: center;
   gap: 3rem;
   background-color: white;
   border-radius: 10px;
@@ -188,16 +198,16 @@ nav ul li:last-child {
 }
 
 .wrapper {
-  width: 30%;
-  margin-top: 6rem;
+  width: 400px;
   display: flex;
   align-items: center;
   flex-direction: column;
+  margin: auto;
 }
 
 .wrapper-project {
-  width: 50%;
-  margin-top: 6rem;
+  width: 600px;
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -502,7 +512,6 @@ input[type="file"] {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-top: 6rem;
 }
 
 .container-detail h1 {
@@ -563,7 +572,7 @@ input[type="file"] {
 }
 
 .wrapper-detail img {
-  width: 60%;
+  width: 700px;
 }
 
 @media screen and (max-width: 600px) {
@@ -572,10 +581,33 @@ input[type="file"] {
   }
 
   nav ul {
-    display: flex;
-    gap: 0.8rem;
+    display: none;
+    /* gap: 0.8rem;
     font-size: 0.9rem;
-    margin-left: -5px;
+    margin-left: -5px; */
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-links ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links ul li {
+    list-style-type: none;
+    padding: 5px;
+  }
+
+  .nav-links.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #d3d3d3;
+    width: 100%;
   }
 
   .nav-logo {
@@ -585,15 +617,18 @@ input[type="file"] {
   .nav-contact {
     padding: 6px 10px;
     border-radius: 12px;
-    margin-right: 5px;
+    margin-left: 5px;
+  }
+
+  .hamburger-menu {
+    display: flex;
   }
 
   .card {
     width: 90%;
     flex-direction: column;
     padding: 2rem;
-    margin-block: 4rem;
-    margin-top: 7rem;
+    margin-top: 2rem;
   }
 
   .social-media {
@@ -610,12 +645,11 @@ input[type="file"] {
   }
 
   .wrapper {
-    width: 80%;
-    margin-top: 6rem;
+    width: 70%;
   }
 
   .wrapper-project {
-    width: 90%;
+    width: 80%;
   }
 
   .wrapper-project-list {
@@ -629,7 +663,7 @@ input[type="file"] {
 
   .duration .end,
   .duration .start {
-    width: 42%;
+    width: 40%;
   }
 
   input,
@@ -665,5 +699,31 @@ input[type="file"] {
 
   .card-project {
     max-width: 100%;
+  }
+
+  .container-detail {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container-detail h1 {
+    margin: 20px 0px 20px 50px;
+  }
+
+  .wrapper-detail {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .wrapper-detail img {
+    width: 100%;
+    margin-left: 20px;
+  }
+
+  .desc-detail {
+    margin-top: 5px;
   }
 }
