@@ -620,9 +620,6 @@ input[type="file"] {
 
   nav ul {
     display: none;
-    /* gap: 0.8rem;
-    font-size: 0.9rem;
-    margin-left: -5px; */
   }
 
   .nav-links {
@@ -763,5 +760,9 @@ input[type="file"] {
 
   .desc-detail {
     margin-top: 5px;
+  }
+
+  .card-testi {
+    margin: auto;
   }
 }
