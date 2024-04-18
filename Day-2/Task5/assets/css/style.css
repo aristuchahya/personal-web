@@ -585,6 +585,8 @@ input[type="file"] {
 .wrapper-testimonial {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+
   gap: 2rem;
 }
 
@@ -611,6 +613,41 @@ input[type="file"] {
   font-weight: 600;
   text-align: end;
   padding-right: 10px;
+}
+
+.rate-star {
+  text-align: end;
+}
+
+.rate-star .fa-regular {
+  color: #f9c538;
+}
+
+.container-rating {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.container-rating h2 {
+  font-weight: 500;
+}
+
+.rating {
+  display: flex;
+  gap: 2rem;
+}
+
+.rating .fa-solid {
+  position: static;
+  font-size: 15px;
+}
+
+.rating-btn {
+  width: 60px;
+  padding: 5px;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 600px) {
@@ -764,5 +801,11 @@ input[type="file"] {
 
   .card-testi {
     margin: auto;
+  }
+
+  .rating {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
   }
 }
